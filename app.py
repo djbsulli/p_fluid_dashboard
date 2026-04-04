@@ -564,14 +564,13 @@ elif page == "Player Statistics":
         st.markdown("---")
 
         # Match touch map
-        st.markdown(f'<div class="section-header">Match Touch Map ({len(match_locs)} touches)</div>', unsafe_allow_html=True)
-
         match_locs = valid_touches[
-            (valid_touches['player_id'] == player_id) &
-            (valid_touches['match_id'] == selected_match_id) &
-            (valid_touches['position_norm'] == selected_match_norm)
-        ]
+    (valid_touches['player_id'] == player_id) &
+    (valid_touches['match_id'] == selected_match_id) &
+    (valid_touches['position_norm'] == selected_match_norm)
+]
 
+        st.markdown(f'<div class="section-header">Match Touch Map ({len(match_locs)} touches)</div>', unsafe_allow_html=True)
         col_mmap, _ = st.columns([2, 1])
         with col_mmap:
             fig, ax = plt.subplots(figsize=(9, 6))
