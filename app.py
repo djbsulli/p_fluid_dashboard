@@ -78,7 +78,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ─── Data Loading ──────────────────────────────────────────────────────────────
-VALID_TOUCHES_GDRIVE_ID = "YOUR_FILE_ID_HERE"
+VALID_TOUCHES_GDRIVE_ID = "1EYuRBk5L090jY0JO5KVUOt2BsNeiloY2"
 
 @st.cache_data
 def load_data():
