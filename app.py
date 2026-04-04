@@ -302,7 +302,7 @@ elif page == "Player Statistics":
         st.stop()
 
     st.markdown("# Player Statistics")
-    st.markdown("Select a player to view their positional fluidity profile, seasonal touch map, and similar players.")
+    st.markdown("Select a player and position to view the player's seasonal and match-level positional fluidity profile")
     st.markdown("---")
 
     # ── Player Selection ──────────────────────────────────────────────────────
@@ -603,7 +603,7 @@ elif page == "Team Statistics":
         st.stop()
 
     st.markdown("# Team Statistics")
-    st.markdown("Select a team to explore their seasonal fluidity profile, tactical positioning, and match-level performance.")
+    st.markdown("Select a team to explore their seasonal and match-level positional fluidity profile.")
     st.markdown("---")
 
     # ── Team Selection ────────────────────────────────────────────────────────
