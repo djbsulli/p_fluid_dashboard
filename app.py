@@ -459,7 +459,7 @@ elif page == "Player Statistics":
         st.markdown("---")
 
         # ── Similar Players ───────────────────────────────────────────────────
-        st.markdown(f'Most Similar Players By Positional Fluidity: {selected_position} (All Leagues)')
+        st.markdown(f'<div class="section-header">Most Similar Players: {selected_position} (All Leagues)</div>', unsafe_allow_html=True)
 
         all_pos_players = season_player_stats[
             (season_player_stats['position_cat'] == selected_position) &
