@@ -111,7 +111,7 @@ def load_data():
     team_match = pd.read_csv(os.path.join(SCRIPT_DIR, "team_match_scores.csv"))
     season_player = pd.read_csv(os.path.join(SCRIPT_DIR, "player_stats_season.csv"))
     filtered_pl = pd.read_csv(os.path.join(SCRIPT_DIR, "players_filtered.csv"))
-    url = f"https://drive.google.com/uc?id={VALID_TOUCHES_GDRIVE_ID}"
+    url = f"https://drive.google.com/uc?id={1EYuRBk5L090jY0JO5KVUOt2BsNeiloY2}"
     output_path = "/tmp/valid_touches.csv"
     gdown.download(url, output_path, quiet=False)
     valid_t = pd.read_csv(output_path)
