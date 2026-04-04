@@ -269,36 +269,8 @@ if page == "Home":
 
     st.markdown("---")
 
-    # ── Navigation Cards ──────────────────────────────────────────────────────
-    st.markdown("## Explore the Dashboard")
-    col1, col2 = st.columns(2)
-    with col1:
-        st.markdown("""
-        <div class='nav-card'>
-            <h2 style='color:white; margin:0;'>Player Statistics</h2>
-            <p style='color:#d0e4f7; margin:8px 0 0 0;'>
-            Explore individual player fluidity scores, seasonal touch maps,
-            position category rankings, and similar player comparisons.
-            </p>
-            <p style='color:#a8d4f5; margin:8px 0 0 0; font-size:0.9rem;'>
-            ← Select <b>Player Statistics</b> from the sidebar to get started
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
-
-    with col2:
-        st.markdown("""
-        <div class='nav-card'>
-            <h2 style='color:white; margin:0;'>Team Statistics</h2>
-            <p style='color:#d0e4f7; margin:8px 0 0 0;'>
-            Explore team tactical profiles, seasonal and match-level fluidity,
-            zonal breakdowns, and tactical quadrant positioning.
-            </p>
-            <p style='color:#a8d4f5; margin:8px 0 0 0; font-size:0.9rem;'>
-            ← Select <b>Team Statistics</b> from the sidebar to get started
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+  
+  
 
 
 # ══════════════════════════════════════════════════════════════════════════════
