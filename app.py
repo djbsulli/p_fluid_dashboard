@@ -564,7 +564,7 @@ elif page == "Player Statistics":
         st.markdown("---")
 
         # Match touch map
-        st.markdown('<div class="section-header">Match Touch Map</div>', unsafe_allow_html=True)
+        st.markdown(f'<div class="section-header">Match Touch Map ({len(match_locs)} touches)</div>', unsafe_allow_html=True)
 
         match_locs = valid_touches[
             (valid_touches['player_id'] == player_id) &
@@ -596,10 +596,6 @@ elif page == "Player Statistics":
                         ha='center', va='center', fontsize=11, color='#6c757d')
 
             opponent_name_pl = selected_match_opt.split("vs ")[1].split("  ")[0]
-            ax.set_title(
-                f"Touches: {len(match_locs)}",
-                fontsize=9, pad=6, color='#6c757d'
-            )
             plt.tight_layout()
             st.pyplot(fig)
             plt.close()
