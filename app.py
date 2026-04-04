@@ -417,8 +417,7 @@ elif page == "Player Statistics":
                 st.info("No touch data available for this player.")
 
         with col_swarm:
-            st.markdown('<div class="section-header">Position Category Distribution</div>',
-                        unsafe_allow_html=True)
+           st.markdown(f'<div class="section-header">Position Relative to {selected_position}s</div>', unsafe_allow_html=True)
 
             pos_data = season_player_stats[
                 season_player_stats['position_cat'] == selected_position
