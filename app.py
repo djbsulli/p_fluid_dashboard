@@ -411,7 +411,7 @@ elif page == "Player Statistics":
                         bw_method=0.3, levels=20, thresh=0.1, alpha=0.85
                     )
 
-                ax.set_title(f"Seasonal Touch Map: {selected_position}", fontsize=10, fontweight='bold', pad=6, color='#2c3e50')
+               
                 plt.tight_layout()
                 st.pyplot(fig)
                 plt.close()
@@ -449,7 +449,6 @@ elif page == "Player Statistics":
             ax.axhline(y=0, color='black', linestyle='--', linewidth=1, alpha=0.3)
             ax.set_xlabel(selected_position, fontsize=10, fontweight='bold')
             ax.set_ylabel('Fluidity Z-Score', fontsize=10, fontweight='bold')
-            ax.set_title(f'{selected_position} — Fluidity Distribution ({selected_player_name})', fontsize=10, fontweight='bold')
             ax.set_ylim(-5, 5)
             ax.tick_params(axis='x', bottom=False, labelbottom=False)
             ax.grid(axis='y', alpha=0.2)
