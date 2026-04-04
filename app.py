@@ -419,7 +419,7 @@ elif page == "Player Statistics":
         with col_swarm:
            st.markdown(f'<div class="section-header">Position Relative to {selected_position}s</div>', unsafe_allow_html=True)
 
-            pos_data = season_player_stats[
+           pos_data = season_player_stats[
                 season_player_stats['position_cat'] == selected_position
             ].copy()
 
