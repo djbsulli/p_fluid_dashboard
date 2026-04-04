@@ -826,7 +826,7 @@ elif page == "Team Statistics":
 
         st.markdown("---")
 
-        st.markdown('<div class="section-header">Match Zonal Breakdown</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">Zonal Breakdown</div>', unsafe_allow_html=True)
 
         # Check for missing zonal data and warn
         zone_nulls = {
