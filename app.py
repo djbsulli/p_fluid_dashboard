@@ -454,7 +454,6 @@ elif page == "Player Statistics":
             ax.axhline(y=0, color='black', linestyle='--', linewidth=1, alpha=0.3)
             ax.set_xlabel(selected_position, fontsize=10, fontweight='bold')
             ax.set_ylabel('Fluidity Z-Score', fontsize=10, fontweight='bold')
-            ax.set_title(f'{selected_position} — Fluidity Distribution ({selected_player_name})', fontsize=10, fontweight='bold')
             ax.set_ylim(-5, 5)
             ax.tick_params(axis='x', bottom=False, labelbottom=False)
             ax.grid(axis='y', alpha=0.2)
