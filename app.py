@@ -708,7 +708,7 @@ elif page == "Team Statistics":
             ax.set_ylim(-4, 4)
             ax.grid(False)
             ax.set_xlabel('Fluidity Z-Score (Season Average)', fontsize=10)
-            ax.set_ylabel('Consistency Z-Score (Season Std)', fontsize=10)
+            ax.set_ylabel('Consistency Z-Score', fontsize=10)
             plt.tight_layout()
             st.pyplot(fig)
             plt.close()
