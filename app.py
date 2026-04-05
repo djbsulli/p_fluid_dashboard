@@ -113,7 +113,7 @@ st.markdown("""
 # ─── Data Loading ──────────────────────────────────────────────────────────────
 import os
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-VALID_TOUCHES_GDRIVE_ID = "YOUR_FILE_ID_HERE"
+VALID_TOUCHES_GDRIVE_ID = "1MiX3alHkzZ5yZqBrygVE3R9I5NQ8suu0"
 
 @st.cache_data
 def load_data():
