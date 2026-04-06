@@ -650,7 +650,7 @@ elif page == "Team Statistics":
         with col1:
             st.markdown(stat_box("Season Fluidity Z-Score", f"{team_row['season_z_score']:.3f}"), unsafe_allow_html=True)
         with col2:
-            st.markdown(stat_box("Consistency Z-Score", f"{std_z:.3f}", unsafe_allow_html=True)
+            st.markdown(stat_box("Consistency Z-Score", f"{std_z:.3f}"), unsafe_allow_html=True)
         with col3:
             st.markdown(stat_box("Tactical Profile", team_row['tactical_profile']), unsafe_allow_html=True)
         with col4:
