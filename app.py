@@ -790,7 +790,7 @@ elif page == "Team Statistics":
             match_opponents[mid] = opponents[0] if len(opponents) > 0 else 'Unknown'
         team_matches_with_meta['opponent'] = team_matches_with_meta['match_id'].map(match_opponents)
 
-        team_matches_sorted = team_matches_with_meta.sort_values('overall_z', ascending=False).reset_index(drop=True)
+        team_matches_sorted = team_matches_with_meta.sort_values('match_id').reset_index(drop=True)
         team_matches_sorted['match_num'] = range(1, len(team_matches_sorted) + 1)
 
         st.markdown('<div class="section-header">Select a Match</div>', unsafe_allow_html=True)
