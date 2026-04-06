@@ -876,6 +876,8 @@ elif page == "Team Statistics":
         ax.bar(x + width / 2, seasonal_values, width, label='Season Average',
                color='#adb5bd', edgecolor='black', linewidth=0.7, alpha=0.7, zorder=3)
 
+        ax.set_ylim(-5, 5)
+
         ax.axhline(0, color='black', linewidth=1.2, linestyle='--', alpha=0.4)
         ax.set_xticks(x)
         ax.set_xticklabels(zones, fontsize=11)
@@ -931,6 +933,7 @@ elif page == "Team Statistics":
             ax.set_ylabel('xG', fontsize=9)
             ax.legend(fontsize=8, frameon=False)
             ax.grid(True, alpha=0.15, linestyle=':')
+            ax.set_ylim(0, 6)
             plt.tight_layout()
             st.pyplot(fig)
             plt.close()
@@ -959,6 +962,7 @@ elif page == "Team Statistics":
             ax.set_ylabel('Field Tilt %', fontsize=9)
             ax.legend(fontsize=8, frameon=False)
             ax.grid(True, alpha=0.15, linestyle=':')
+            ax.set_ylim(0, 100)
             plt.tight_layout()
             st.pyplot(fig)
             plt.close()
