@@ -648,7 +648,7 @@ elif page == "Team Statistics":
         with col3:
             st.markdown(stat_box("Tactical Profile", team_row['tactical_profile']), unsafe_allow_html=True)
         with col4:
-            st.markdown(stat_box("Matches Included", int(team_row['matches_included'])), unsafe_allow_html=True)
+            st.markdown(stat_box("Matches", int(team_row['matches_included'])), unsafe_allow_html=True)
 
         st.markdown("---")
 
