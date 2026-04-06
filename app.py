@@ -818,7 +818,7 @@ elif page == "Team Statistics":
         with col1:
             st.markdown(stat_box("Match Fluidity Score", f"{match_row['overall_z']:.3f}"), unsafe_allow_html=True)
         with col2:
-            st.markdown(stat_box("Season Rank", f"#{match_rank_tm} of {total_matches_tm} matches"), unsafe_allow_html=True)
+            st.markdown(stat_box("Season Rank (Fluidity Score)", f"{match_rank_tm} / {total_matches_tm} matches"), unsafe_allow_html=True)
         with col3:
             st.markdown(stat_box("Opponent", opponent_name), unsafe_allow_html=True)
 
