@@ -927,6 +927,7 @@ elif page == "Team Statistics":
 
             ax.set_xlabel('Match Number', fontsize=9)
             ax.set_ylabel('xG', fontsize=9)
+            ax.set_ylim(0,6)
             ax.legend(fontsize=8, frameon=False)
             ax.grid(True, alpha=0.15, linestyle=':')
             plt.tight_layout()
@@ -957,6 +958,7 @@ elif page == "Team Statistics":
             ax.set_ylabel('Field Tilt %', fontsize=9)
             ax.legend(fontsize=8, frameon=False)
             ax.grid(True, alpha=0.15, linestyle=':')
+            ax.set_ylim(0,100)
             plt.tight_layout()
             st.pyplot(fig)
             plt.close()
