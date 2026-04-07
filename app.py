@@ -363,7 +363,7 @@ elif page == "Player Statistics":
                        label=f'Position avg: {pos_avg:.1f}%')
             ax.set_xlabel(selected_position, fontsize=10, fontweight='bold')
             ax.set_ylabel('Fluidity Score (%)', fontsize=10, fontweight='bold')
-            ax.set_ylim(20,80)
+            ax.set_ylim(30,80)
             ax.tick_params(axis='x', bottom=False, labelbottom=False)
             ax.grid(axis='y', alpha=0.2)
             ax.legend(fontsize=11, frameon=False)
