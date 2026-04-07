@@ -580,7 +580,7 @@ elif page == "Team Statistics":
             ax.set_xlabel('Average Fluidity (%)', fontsize=10, fontweight='bold')
             ax.legend(fontsize=9, frameon=False)
             ax.grid(axis='x', alpha=0.25, zorder=0)
-            ax.set_xlim(40, 100)
+            ax.set_xlim(40, 80)
             plt.tight_layout()
             st.pyplot(fig)
             plt.close()
