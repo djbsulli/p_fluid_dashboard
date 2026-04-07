@@ -212,10 +212,9 @@ if page == "Home":
         <h4>Step 1 — Touch Threshold</h4>
         <p>Ball touch events were extracted from the StatsBomb open data repository. A minimum of <b>15 touches in
         a defined position per match</b> was required for inclusion. Data was collected from the highest leagues in
-        English, Spanish, Italian and German football, using the 2015–16 seasons as the most recent open-source
-        data samples.</p>
+        English, Spanish, Italian and German football, from the 2015-2016 League Season. These are the most recent full league seasons of data openly acccessible.</p>
         <h4>Step 2 — Zone Assignment</h4>
-        <p>The pitch was divided into a <b>9-zone grid</b> (3 columns × 3 rows).</p>
+        <p>The pitch was divided into a <b>9-zone grid</b>, splitting the defensive, midfield and attacking thirds into left, central and right channels. Statsbomb coordinates are normalised to an attacking direction of left to right, which is represented in this project.</p>
         <h4>Step 3 — Fluidity Percentage</h4>
         <p>For each qualifying player-position-match combination, the <b>fluidity score</b> was calculated as the
         percentage of touches falling outside the player's most frequently occupied zone:
@@ -765,10 +764,10 @@ elif page == "Team Statistics":
             if len(sel_xg_row) > 0:
                 ax.scatter(sel_xg_row['match_num'], sel_xg_row['shot_statsbomb_xg'],
                            color='#e74c3c', s=100, zorder=5, edgecolors='black', linewidths=1.2)
-            ax.set_xlabel('Match Number', fontsize=9)
-            ax.set_ylabel('NPXG', fontsize=9)
+            ax.set_xlabel('Match Number', fontsize=11,fontweight='bold')
+            ax.set_ylabel('NPXG', fontsize=11,fontweight='bold')
             ax.set_ylim(0, 6)
-            ax.legend(fontsize=8, frameon=False)
+            ax.legend(fontsize=10, frameon=False)
             ax.grid(True, alpha=0.15, linestyle=':')
             plt.tight_layout()
             st.pyplot(fig)
@@ -791,10 +790,10 @@ elif page == "Team Statistics":
             if len(sel_ft_row) > 0:
                 ax.scatter(sel_ft_row['match_num'], sel_ft_row['field_tilt'],
                            color='#e74c3c', s=100, zorder=5, edgecolors='black', linewidths=1.2)
-            ax.set_xlabel('Match Number', fontsize=9)
-            ax.set_ylabel('Field Tilt %', fontsize=9)
+            ax.set_xlabel('Match Number', fontsize=11,fontweight='bold')
+            ax.set_ylabel('Field Tilt %', fontsize=11,fontweight='bold')
             ax.set_ylim(0, 100)
-            ax.legend(fontsize=8, frameon=False)
+            ax.legend(fontsize=10, frameon=False)
             ax.grid(True, alpha=0.15, linestyle=':')
             plt.tight_layout()
             st.pyplot(fig)
