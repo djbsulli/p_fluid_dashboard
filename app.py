@@ -792,10 +792,10 @@ elif page == "Team Statistics":
             if len(sel_ft_row) > 0:
                 ax.scatter(sel_ft_row['match_num'], sel_ft_row['field_tilt'],
                            color='#e74c3c', s=100, zorder=5, edgecolors='black', linewidths=1.2)
-            ax.set_xlabel('Match Number', fontsize=9)
-            ax.set_ylabel('Field Tilt %', fontsize=9)
+            ax.set_xlabel('Match Number', fontsize=11,fontweight='bold')
+            ax.set_ylabel('Field Tilt %', fontsize=11,fontweight='bold')
             ax.set_ylim(0, 100)
-            ax.legend(fontsize=8, frameon=False)
+            ax.legend(fontsize=11, frameon=False)
             ax.grid(True, alpha=0.15, linestyle=':')
             plt.tight_layout()
             st.pyplot(fig)
