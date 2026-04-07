@@ -366,7 +366,7 @@ elif page == "Player Statistics":
             ax.set_ylim(0, 100)
             ax.tick_params(axis='x', bottom=False, labelbottom=False)
             ax.grid(axis='y', alpha=0.2)
-            ax.legend(fontsize=8, frameon=False)
+            ax.legend(fontsize=10, frameon=False)
             plt.tight_layout()
             st.pyplot(fig)
             plt.close()
@@ -563,12 +563,12 @@ elif page == "Team Statistics":
         bar_width = 0.5
         for i, (bar, avg) in enumerate(zip(bars, global_avgs)):
             x_center = bar.get_x() + bar.get_width() / 2
-            label = 'Global Average' if i == 0 else '_nolegend_'
+            label = 'All Teams Average' if i == 0 else '_nolegend_'
             ax.plot([x_center - bar_width / 2, x_center + bar_width / 2],
                     [avg, avg], color='#e74c3c', linewidth=2,
                     linestyle='--', zorder=4, label=label)
         ax.set_ylabel('Average Fluidity (%)', fontsize=10, fontweight='bold')
-        ax.legend(fontsize=9, frameon=False)
+        ax.legend(fontsize=10, frameon=False)
         ax.grid(axis='y', alpha=0.25, zorder=0)
         ax.set_ylim(0, 100)
         plt.tight_layout()
@@ -594,7 +594,7 @@ elif page == "Team Statistics":
         ax.axhline(season_avg_z, color='#e74c3c', linewidth=1.5, linestyle='--',
                    label=f'Season avg: {season_avg_z:.2f}', zorder=2)
         ax.axhline(0, color='black', linewidth=1, linestyle=':', alpha=0.5,
-                   label='Global Average', zorder=1)
+                   label='All Teams Average', zorder=1)
         ax.set_ylim(-4.5, 4.5)
         ax.set_xlabel('Match Number', fontsize=11, fontweight='bold')
         ax.set_ylabel('Fluidity Z-Score', fontsize=11, fontweight='bold')
@@ -670,7 +670,7 @@ elif page == "Team Statistics":
         ax.axhline(season_avg_z, color='#e74c3c', linewidth=1.5, linestyle='--',
                    label=f'Season avg: {season_avg_z:.2f}', zorder=2)
         ax.axhline(0, color='black', linewidth=1, linestyle=':', alpha=0.5,
-                   label='Global Average', zorder=1)
+                   label='All Teams Average', zorder=1)
         if len(sel_match_row) > 0:
             ax.scatter(sel_match_row['match_num'], sel_match_row['team_match_z'],
                        color='#e74c3c', s=120, zorder=5, edgecolors='black',
