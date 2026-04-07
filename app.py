@@ -767,7 +767,7 @@ elif page == "Team Statistics":
                 ax.scatter(sel_xg_row['match_num'], sel_xg_row['shot_statsbomb_xg'],
                            color='#e74c3c', s=100, zorder=5, edgecolors='black', linewidths=1.2)
             ax.set_xlabel('Match Number', fontsize=11,fontweight='bold')
-            ax.set_ylabel('NPXG', fontsize=11,fontweight='bold)
+            ax.set_ylabel('NPXG', fontsize=11,fontweight='bold')
             ax.set_ylim(0, 6)
             ax.legend(fontsize=10, frameon=False)
             ax.grid(True, alpha=0.15, linestyle=':')
