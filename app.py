@@ -541,7 +541,7 @@ elif page == "Team Statistics":
         st.markdown("---")
 
         # Zonal fluidity breakdown
-        st.markdown('<div class="section-header">Zonal Fluidity Breakdown (Unzscored %)</div>',
+        st.markdown('<div class="section-header">Zonal Fluidity Breakdown (Raw Percentages)</div>',
                     unsafe_allow_html=True)
 
         zones = ['Defence', 'Midfield', 'Attack']
