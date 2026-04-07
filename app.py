@@ -137,7 +137,7 @@ def draw_binned_touch_map(touch_df, ax, title_suffix=""):
                               color=color, zorder=2, alpha=0.75)
         ax.add_patch(rect)
         ax.text((x0 + x1) / 2, (y0 + y1) / 2, f'{pct:.0f}%',
-                ha='center', va='center', fontsize=11,
+                ha='center', va='center', fontsize=13,
                 fontweight='bold', color='black', zorder=4)
 
     # grid lines
@@ -366,7 +366,7 @@ elif page == "Player Statistics":
             ax.set_ylim(0, 100)
             ax.tick_params(axis='x', bottom=False, labelbottom=False)
             ax.grid(axis='y', alpha=0.2)
-            ax.legend(fontsize=8, frameon=False)
+            ax.legend(fontsize=11, frameon=False)
             plt.tight_layout()
             st.pyplot(fig)
             plt.close()
@@ -592,13 +592,13 @@ elif page == "Team Statistics":
         ax.plot(team_matches_sorted['match_num'], team_matches_sorted['team_match_z'],
                 color='#4a7fb5', linewidth=1.5, marker='o', markersize=5, zorder=3)
         ax.axhline(season_avg_z, color='#e74c3c', linewidth=1.5, linestyle='--',
-                   label=f'Season avg: {season_avg_z:.2f}', zorder=2)
+                   label=f' Team Season avg: {season_avg_z:.2f}', zorder=2)
         ax.axhline(0, color='black', linewidth=1, linestyle=':', alpha=0.5,
                    label='All Teams Average', zorder=1)
         ax.set_ylim(-4.5, 4.5)
         ax.set_xlabel('Match Number', fontsize=11, fontweight='bold')
         ax.set_ylabel('Fluidity Z-Score', fontsize=11, fontweight='bold')
-        ax.legend(fontsize=9, frameon=False)
+        ax.legend(fontsize=11, frameon=False)
         ax.grid(True, alpha=0.15, linestyle=':')
         plt.tight_layout()
         st.pyplot(fig, use_container_width=True)
@@ -668,7 +668,7 @@ elif page == "Team Statistics":
         ax.plot(team_matches_sorted['match_num'], team_matches_sorted['team_match_z'],
                 color='#4a7fb5', linewidth=1.5, marker='o', markersize=5, zorder=3)
         ax.axhline(season_avg_z, color='#e74c3c', linewidth=1.5, linestyle='--',
-                   label=f'Season avg: {season_avg_z:.2f}', zorder=2)
+                   label=f' Team Season avg: {season_avg_z:.2f}', zorder=2)
         ax.axhline(0, color='black', linewidth=1, linestyle=':', alpha=0.5,
                    label='All Teams Average', zorder=1)
         if len(sel_match_row) > 0:
@@ -678,7 +678,7 @@ elif page == "Team Statistics":
         ax.set_ylim(-4.5, 4.5)
         ax.set_xlabel('Match Number', fontsize=11, fontweight='bold')
         ax.set_ylabel('Fluidity Z-Score', fontsize=11, fontweight='bold')
-        ax.legend(fontsize=9, frameon=False)
+        ax.legend(fontsize=11, frameon=False)
         ax.grid(True, alpha=0.15, linestyle=':')
         plt.tight_layout()
         st.pyplot(fig, use_container_width=True)
@@ -725,14 +725,14 @@ elif page == "Team Statistics":
         ax.set_facecolor('#f8f9fa')
         ax.bar(x - width / 2, match_values, width, label='Match',
                color='#4a7fb5', edgecolor='black', linewidth=0.7, alpha=0.9, zorder=3)
-        ax.bar(x + width / 2, seasonal_values, width, label='Season Average',
+        ax.bar(x + width / 2, seasonal_values, width, label=' Team Season Average',
                color='#adb5bd', edgecolor='black', linewidth=0.7, alpha=0.7, zorder=3)
         ax.axhline(0, color='black', linewidth=1.2, linestyle='--', alpha=0.4)
         ax.set_xticks(x)
         ax.set_xticklabels(zones_v, fontsize=11)
         ax.set_ylabel('Fluidity Score (%)', fontsize=10)
         ax.set_ylim(0, 100)
-        ax.legend(fontsize=9, frameon=False)
+        ax.legend(fontsize=11, frameon=False)
         ax.grid(axis='y', alpha=0.2, zorder=0)
         plt.tight_layout()
         st.pyplot(fig, use_container_width=True)
