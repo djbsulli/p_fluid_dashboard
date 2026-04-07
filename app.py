@@ -176,16 +176,9 @@ if page == "Home":
         st.markdown("## What is Positional Fluidity?")
         st.markdown("""
         <div class='info-card'>
-        <p>Throughout football history, debates surrounding structure and freedom have fundamentally shaped tactical thinking.
-        This tension is characterised by the contrast between tactical systems championing <b>positional fluidity</b> —
-        where players have creative freedom to move widely across the pitch — and more organised, structured approaches
-        where players occupy defined zones and interact in pre-set patterns.</p>
-        <p>For much of the twenty-first century, <b>positional play</b> (<i>juego de posición</i>) dominated global football,
-        driven by the success of Pep Guardiola at Barcelona, Bayern Munich, and Manchester City. However, recent years
-        have seen a resurgence of fluid, positionally expressive approaches.</p>
-        <p><b>Positional fluidity</b>, as measured in this project, refers to the degree to which a player operates
-        across multiple areas of the pitch rather than concentrating their activity in a single consistent zone —
-        expressed as the percentage of touches occurring outside a player's most frequently occupied pitch zone.</p>
+        <p>
+
+.</p>
         </div>
         """, unsafe_allow_html=True)
 
