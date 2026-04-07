@@ -451,7 +451,7 @@ elif page == "Player Statistics":
         with col1:
             st.markdown(stat_box("Match Fluidity Score", f"{match_row_pl['fluidity_pct']:.1f}%"), unsafe_allow_html=True)
         with col2:
-            st.markdown(stat_box("Season Rank", f"#{match_rank_pl} of {total_matches_pl} matches"), unsafe_allow_html=True)
+            st.markdown(stat_box("Season Rank (All Player Matches in Position)", f"#{match_rank_pl} of {total_matches_pl} matches"), unsafe_allow_html=True)
 
         st.markdown("---")
 
