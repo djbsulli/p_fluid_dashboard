@@ -730,7 +730,7 @@ elif page == "Team Statistics":
         ax.axhline(0, color='black', linewidth=1.2, linestyle='--', alpha=0.4)
         ax.set_xticks(x)
         ax.set_xticklabels(zones_v, fontsize=11)
-        ax.set_ylabel('Fluidity Score (%)', fontsize=10)
+        ax.set_ylabel('Fluidity Score (%)', fontsize=11,fontweight='bold)
         ax.set_ylim(0, 100)
         ax.legend(fontsize=11, frameon=False)
         ax.grid(axis='y', alpha=0.2, zorder=0)
