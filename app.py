@@ -541,7 +541,7 @@ elif page == "Team Statistics":
         st.markdown("---")
 
         # Zonal fluidity breakdown
-        st.markdown('<div class="section-header">Zonal Fluidity Breakdown (season averages)</div>',
+        st.markdown('<div class="section-header">Zonal Fluidity Breakdown (Unzscored %)</div>',
                     unsafe_allow_html=True)
 
         zones = ['Defence', 'Midfield', 'Attack']
@@ -653,7 +653,7 @@ elif page == "Team Statistics":
         st.markdown("---")
 
         # Zonal breakdown
-        st.markdown('<div class="section-header">Zonal Breakdown (match-level)</div>',
+        st.markdown('<div class="section-header">Zonal Breakdown (Raw Percentages)</div>',
                     unsafe_allow_html=True)
 
         zone_nulls = {
