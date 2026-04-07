@@ -214,7 +214,7 @@ if page == "Home":
         a defined position per match</b> was required for inclusion. Data was collected from the highest leagues in
         English, Spanish, Italian and German football, from the 2015-2016 League Season. These are the most recent full league seasons of data openly acccessible.</p>
         <h4>Step 2 — Zone Assignment</h4>
-        <p>The pitch was divided into a <b>9-zone grid</b>, splitting the defensive, midfield and attacking thirds into left, central and right channels. Statsbomb coordinates are normalised to an attacking direction of left to right, which is represented in this project.</p>
+        <p>The pitch was divided into a <b>9-zone grid</b>, splitting the defensive, midfield and attacking thirds into left, central and right channels (see touch maps in player statistics for reference). Statsbomb coordinates are normalised to an attacking direction of left to right throughout a match, which is represented in this project.</p>
         <h4>Step 3 — Fluidity Percentage</h4>
         <p>For each qualifying player-position-match combination, the <b>fluidity score</b> was calculated as the
         percentage of touches falling outside the player's most frequently occupied zone:
