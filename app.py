@@ -264,17 +264,17 @@ if page == "Home":
                     ax_grid.text(cx, cy, str(zone_num), ha='center', va='center',
                                 fontsize=13, fontweight='bold', color='#2c3e50', zorder=5)
                     zone_num += 1
-            ax_grid.text(20, -5, 'Defensive Third', ha='center', fontsize=8,
+            ax_grid.text(20, -5, 'Defensive Third', ha='center', fontsize=10,
                         color='#6c757d', fontweight='bold')
-            ax_grid.text(60, -5, 'Middle Third', ha='center', fontsize=8,
+            ax_grid.text(60, -5, 'Middle Third', ha='center', fontsize=10,
                         color='#6c757d', fontweight='bold')
-            ax_grid.text(100, -5, 'Attacking Third', ha='center', fontsize=8,
+            ax_grid.text(100, -5, 'Attacking Third', ha='center', fontsize=10,
                         color='#6c757d', fontweight='bold')
-            ax_grid.text(-8, 9, 'Left', ha='center', fontsize=8,
+            ax_grid.text(-8, 9, 'Left', ha='center', fontsize=10,
                         color='#6c757d', fontweight='bold', rotation=90)
-            ax_grid.text(-8, 40, 'Central', ha='center', fontsize=8,
+            ax_grid.text(-8, 40, 'Central', ha='center', fontsize=10,
                         color='#6c757d', fontweight='bold', rotation=90)
-            ax_grid.text(-8, 71, 'Right', ha='center', fontsize=8,
+            ax_grid.text(-8, 71, 'Right', ha='center', fontsize=10,
                         color='#6c757d', fontweight='bold', rotation=90)
             ax_grid.set_title('')
             plt.tight_layout()
