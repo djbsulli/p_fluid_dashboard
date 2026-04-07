@@ -534,7 +534,7 @@ elif page == "Team Statistics":
         with col2:
             st.markdown(stat_box("Matches", int(team_row['matches'])), unsafe_allow_html=True)
         with col3:
-            st.markdown(stat_box("Avg xG per Match", f"{team_xg_avg:.2f}" if pd.notna(team_xg_avg) else "N/A"), unsafe_allow_html=True)
+            st.markdown(stat_box("Avg Non-Penalty Expected Goals (NPXG)", f"{team_xg_avg:.2f}" if pd.notna(team_xg_avg) else "N/A"), unsafe_allow_html=True)
         with col4:
             st.markdown(stat_box("Avg Field Tilt %", f"{team_ft_avg:.1f}" if pd.notna(team_ft_avg) else "N/A"), unsafe_allow_html=True)
 
@@ -645,7 +645,7 @@ elif page == "Team Statistics":
             st.markdown(stat_box("Match Fluidity Score", f"{match_row['team_match_z']:.3f}"), unsafe_allow_html=True)
         with col2:
             xg_val = match_row.get('shot_statsbomb_xg')
-            st.markdown(stat_box("Expected Goals (xG)", f"{xg_val:.2f}" if pd.notna(xg_val) else "N/A"), unsafe_allow_html=True)
+            st.markdown(stat_box("Non-Penalty Expected Goals (NPXG)", f"{xg_val:.2f}" if pd.notna(xg_val) else "N/A"), unsafe_allow_html=True)
         with col3:
             ft_val = match_row.get('field_tilt')
             st.markdown(stat_box("Field Tilt %", f"{ft_val:.1f}" if pd.notna(ft_val) else "N/A"), unsafe_allow_html=True)
@@ -706,32 +706,9 @@ elif page == "Team Statistics":
 
         st.markdown("---")
 
-        # Attacking Performance
-        st.markdown('<div class="section-header">Attacking Performance</div>', unsafe_allow_html=True)
-
-        col_xg, col_ft = st.columns(2)
-        xg_val  = match_row.get('shot_statsbomb_xg')
-        ft_val  = match_row.get('field_tilt')
-        xg_avg  = team_matches_sorted['shot_statsbomb_xg'].mean()
-        ft_avg  = team_matches_sorted['field_tilt'].mean()
-
-        with col_xg:
-            xg_colour = "#2ecc71" if pd.notna(xg_val) and xg_val >= xg_avg else "#e74c3c"
-            st.markdown(
-                f"<div style='background:#ffffff; border:1px solid #dee2e6; border-radius:8px; padding:10px 14px;'>"
-                f"<div style='font-size:0.72rem; color:#6c757d; margin-bottom:4px;'>Expected Goals (xG)</div>"
-                f"<div style='font-size:1.1rem; font-weight:600; color:{xg_colour};'>{f'{xg_val:.2f}' if pd.notna(xg_val) else 'N/A'}</div>"
-                f"</div>", unsafe_allow_html=True)
-        with col_ft:
-            ft_colour = "#2ecc71" if pd.notna(ft_val) and ft_val >= ft_avg else "#e74c3c"
-            st.markdown(
-                f"<div style='background:#ffffff; border:1px solid #dee2e6; border-radius:8px; padding:10px 14px;'>"
-                f"<div style='font-size:0.72rem; color:#6c757d; margin-bottom:4px;'>Field Tilt %</div>"
-                f"<div style='font-size:1.1rem; font-weight:600; color:{ft_colour};'>{f'{ft_val:.1f}' if pd.notna(ft_val) else 'N/A'}</div>"
-                f"</div>", unsafe_allow_html=True)
 
         st.markdown("---")
-        st.markdown('<div class="section-header">Comparison to Seasonal Averages</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">Attacking Performance</div>', unsafe_allow_html=True)
 
         col_xg_line, col_ft_line = st.columns(2)
 
@@ -756,7 +733,7 @@ elif page == "Team Statistics":
                 ax.scatter(sel_xg_row['match_num'], sel_xg_row['shot_statsbomb_xg'],
                            color='#e74c3c', s=100, zorder=5, edgecolors='black', linewidths=1.2)
             ax.set_xlabel('Match Number', fontsize=9)
-            ax.set_ylabel('xG', fontsize=9)
+            ax.set_ylabel('NPXG', fontsize=9)
             ax.set_ylim(0, 6)
             ax.legend(fontsize=8, frameon=False)
             ax.grid(True, alpha=0.15, linestyle=':')
