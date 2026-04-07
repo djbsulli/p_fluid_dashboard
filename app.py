@@ -708,7 +708,7 @@ elif page == "Team Statistics":
 
 
         st.markdown("---")
-        st.markdown('<div class="section-header">Attacking Performance</div>', unsafe_allow_html=True)
+        st.markdown('<div class="section-header">Attacking Output</div>', unsafe_allow_html=True)
 
         col_xg_line, col_ft_line = st.columns(2)
 
