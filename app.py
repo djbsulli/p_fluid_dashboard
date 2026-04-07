@@ -646,7 +646,7 @@ elif page == "Team Statistics":
         with col1:
             st.markdown(stat_box("Match Fluidity Score", f"{match_row['team_match_z']:.3f}"), unsafe_allow_html=True)
         with col2:
-            st.markdown(stat_box("Season Rank", f"#{match_rank_tm} of {total_matches_tm} matches"), unsafe_allow_html=True)
+            st.markdown(stat_box("Season Fluidity Rank (All Team's Matches)", f"#{match_rank_tm} of {total_matches_tm} matches"), unsafe_allow_html=True)
         with col3:
             xg_val = match_row.get('shot_statsbomb_xg')
             st.markdown(stat_box("Non-Penalty Expected Goals (NPXG)", f"{xg_val:.2f}" if pd.notna(xg_val) else "N/A"), unsafe_allow_html=True)
