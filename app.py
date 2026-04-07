@@ -700,7 +700,7 @@ elif page == "Team Statistics":
             ax.set_yticks(y)
             ax.set_yticklabels(mpos_f, fontsize=10)
             ax.set_xlabel('Fluidity Score (%)', fontsize=10, fontweight='bold')
-            ax.set_xlim(0, 100)
+            ax.set_xlim(10, 90)
             ax.legend(fontsize=9, frameon=False)
             ax.grid(axis='x', alpha=0.2, zorder=0)
             plt.tight_layout()
