@@ -317,7 +317,7 @@ elif page == "Player Statistics":
 
         with col_map:
             st.markdown('<div class="section-header">Touch Locations</div>', unsafe_allow_html=True)
-            st.markdown("<div style='font-size:0.8rem; color:#6c757d; margin-bottom:6px;'>Attacking direction: left → right | % of seasonal touches per zone</div>", unsafe_allow_html=True)
+            st.markdown("<div style='font-size:1rem; font-weight:600; color:#2c3e50; margin-bottom:6px;'>Attacking direction: left → right</div>", unsafe_allow_html=True)
 
             player_touches = load_touches(player_id)
             season_touches = player_touches[player_touches['position_norm'] == player_row['position_norm']]
@@ -465,8 +465,7 @@ elif page == "Player Statistics":
         n_touches = len(match_locs)
         st.markdown(f'<div class="section-header">Touch Locations: {n_touches} touches</div>',
                     unsafe_allow_html=True)
-        st.markdown("<div style='font-size:0.8rem; color:#6c757d; margin-bottom:6px;'>Attacking direction: left → right | % of match touches per zone</div>",
-                    unsafe_allow_html=True)
+        st.markdown("<div style='font-size:1rem; font-weight:600; color:#2c3e50; margin-bottom:6px;'>Attacking direction: left → right</div>", unsafe_allow_html=True)
 
         col_mmap, _ = st.columns([2, 1])
         with col_mmap:
