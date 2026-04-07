@@ -210,8 +210,8 @@ if page == "Home":
         st.markdown("""
         <div class='info-card'>
         <h4>Step 1 — Touch Threshold</h4>
-        <p>Ball touch events were extracted from the StatsBomb open data repository. A minimum of <b>15 touches in
-        a defined position per match</b> was required for inclusion. Data was collected from the highest leagues in
+        <p>Open Play, outfield ball touch data was extracted for this project, removing any ball touches by goalkeepers, and from taking set-pieces.This ensured that all data pertained to open-play attacking possesion. A minimum of <b>15 open-play touches in
+        a defined position (see positions below) per match</b> was required for inclusion. Data was collected from the highest leagues in
         English, Spanish, Italian and German football, from the 2015-2016 League Season. These are the most recent full league seasons of data openly acccessible.</p>
         <h4>Step 2 — Zone Assignment</h4>
         <p>The pitch was divided into a <b>9-zone grid</b>, splitting the defensive, midfield and attacking thirds into left, central and right channels (see touch maps in player statistics for reference). Statsbomb coordinates are normalised to an attacking direction of left to right throughout a match, which is represented in this project.</p>
