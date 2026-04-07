@@ -137,7 +137,7 @@ def draw_binned_touch_map(touch_df, ax, title_suffix=""):
                               color=color, zorder=2, alpha=0.75)
         ax.add_patch(rect)
         ax.text((x0 + x1) / 2, (y0 + y1) / 2, f'{pct:.0f}%',
-                ha='center', va='center', fontsize=9,
+                ha='center', va='center', fontsize=11,
                 fontweight='bold', color='black', zorder=4)
 
     # grid lines
