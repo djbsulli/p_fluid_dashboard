@@ -142,8 +142,8 @@ def draw_binned_touch_map(touch_df, ax, title_suffix=""):
 
     # grid lines
     for x in x_bins_9[1:-1]:
-        ax.plot([x, x], [0, 80], color='white', linewidth=1.2,
-                zorder=3, linestyle='--', alpha=0.7)
+        ax.plot([x, x], [0, 80], color='black', linewidth=1.2,
+                zorder=3, linestyle='--', alpha=0.5)
     for y in y_bins_9[1:-1]:
         ax.plot([0, 120], [y, y], color='white', linewidth=1.2,
                 zorder=3, linestyle='--', alpha=0.7)
