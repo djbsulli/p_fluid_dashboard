@@ -28,7 +28,7 @@ Raw data source: StatsBomb Open Data Repository — [github.com/statsbomb/open-d
 
 ## Built with
 
-Python · Streamlit · mplsoccer · matplotlib · pandas · seaborn
+Python - Streamlit - mplsoccer - matplotlib -pandas - seaborn - scipy - statsmodels
 
 ## Live app
 
