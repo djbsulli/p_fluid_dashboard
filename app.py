@@ -823,7 +823,6 @@ elif page == "Team Statistics":
             xg_league_avg = team_match_stats[
                 team_match_stats['competition'] == team_row['competition']
             ]['shot_statsbomb_xg'].mean()
-
             fig, ax = plt.subplots(figsize=(6, 4))
             fig.patch.set_facecolor('#f8f9fa')
             ax.set_facecolor('#f8f9fa')
@@ -836,9 +835,10 @@ elif page == "Team Statistics":
             sel_xg_row = xg_data[xg_data['match_id'] == selected_match_id]
             if len(sel_xg_row) > 0:
                 ax.scatter(sel_xg_row['match_num'], sel_xg_row['shot_statsbomb_xg'],
-                           color='#e74c3c', s=100, zorder=5, edgecolors='black', linewidths=1.2)
-            ax.set_xlabel('Match Number', fontsize=11,fontweight='bold')
-            ax.set_ylabel('NPXG', fontsize=11,fontweight='bold')
+                           color='#e74c3c', s=100, zorder=5, edgecolors='black',
+                           linewidths=1.2, label='Selected Match')
+            ax.set_xlabel('Match Number', fontsize=11, fontweight='bold')
+            ax.set_ylabel('NPXG', fontsize=11, fontweight='bold')
             ax.set_ylim(0, 6)
             ax.legend(fontsize=10, frameon=False)
             ax.grid(True, alpha=0.15, linestyle=':')
@@ -849,7 +849,6 @@ elif page == "Team Statistics":
         with col_ft_line:
             ft_data = team_matches_sorted.dropna(subset=['field_tilt']).copy()
             ft_season_avg = ft_data['field_tilt'].mean()
-
             fig, ax = plt.subplots(figsize=(6, 4))
             fig.patch.set_facecolor('#f8f9fa')
             ax.set_facecolor('#f8f9fa')
@@ -862,9 +861,10 @@ elif page == "Team Statistics":
             sel_ft_row = ft_data[ft_data['match_id'] == selected_match_id]
             if len(sel_ft_row) > 0:
                 ax.scatter(sel_ft_row['match_num'], sel_ft_row['field_tilt'],
-                           color='#e74c3c', s=100, zorder=5, edgecolors='black', linewidths=1.2)
-            ax.set_xlabel('Match Number', fontsize=11,fontweight='bold')
-            ax.set_ylabel('Field Tilt %', fontsize=11,fontweight='bold')
+                           color='#e74c3c', s=100, zorder=5, edgecolors='black',
+                           linewidths=1.2, label='Selected Match')
+            ax.set_xlabel('Match Number', fontsize=11, fontweight='bold')
+            ax.set_ylabel('Field Tilt %', fontsize=11, fontweight='bold')
             ax.set_ylim(0, 100)
             ax.legend(fontsize=10, frameon=False)
             ax.grid(True, alpha=0.15, linestyle=':')
