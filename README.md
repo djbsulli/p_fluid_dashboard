@@ -10,7 +10,7 @@ This dashboard utilises code and pre-proccessed data from a dissertation project
 - Player fluidity percentages at a match level are calculated as the percentage of their touches occurring outside their most frequently occupied pitch zone (using a 9*9 pitch grid).
 - These match scores are then seasonally aggregated for season-level statistics.
 - Team scores are derived by z-scoring player percentages within position categories before aggregating to a team's match fluidity score.
-- These scores are then aggregated and re-z-scored into a team's seasonal fluidity score
+- The mean of these match scores is calculated , defined as the 'Average Fluidity Per 90'
 - Team statistics are displayed alongside key attacking performance indicators (Field tilt and non-penalty expected goals), so users can get insight on how a team's
 positional fluidity impacts attacking output.
 
