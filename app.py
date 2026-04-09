@@ -309,7 +309,7 @@ elif page == "Player Statistics":
         with col1:
             st.markdown(stat_box("Team", player_row['team']), unsafe_allow_html=True)
         with col2:
-            st.markdown(stat_box("Fluidity Score", f"{player_row['season_fluidity']:.1f}%"), unsafe_allow_html=True)
+            st.markdown(stat_box("Average Fluidity Score (per 90)", f"{player_row['season_fluidity']:.1f}%"), unsafe_allow_html=True)
         with col3:
             st.markdown(stat_box("All Leagues Rank", f"#{int(player_row['all_leagues_f_rank'])}"), unsafe_allow_html=True)
         with col4:
