@@ -241,8 +241,7 @@ if page == "Home":
         retained for supplementary analysis. Match scores were re-z-scored relative to the full cross-league
         distribution.</p>
         <h4>Step 3 — Seasonal Aggregation</h4>
-        <p>Seasonal team fluidity scores were calculated as the mean of all match-level z-scores, then re-z-scored
-        relative to all 78 teams in the sample. Non z-scored position category seasonal averages were also retained
+        <p>Seasonal team fluidity scores were calculated as the mean of all match-level z-scores. Non z-scored position category seasonal averages were also retained
         for supplementary analysis.</p>
         </div>
         """, unsafe_allow_html=True)
