@@ -547,9 +547,9 @@ elif page == "Team Statistics":
         with col4:
             st.markdown(stat_box("Matches", int(team_row['matches'])), unsafe_allow_html=True)
         with col5:
-            st.markdown(stat_box("Avg Non-Penalty Expected Goals (NPXG)", f"{team_xg_avg:.2f}" if pd.notna(team_xg_avg) else "N/A"), unsafe_allow_html=True)
+            st.markdown(stat_box("Avg Non-Penalty Expected Goals Per 90 (NPXG)", f"{team_xg_avg:.2f}" if pd.notna(team_xg_avg) else "N/A"), unsafe_allow_html=True)
         with col6:
-            st.markdown(stat_box("Avg Field Tilt %", f"{team_ft_avg:.1f}" if pd.notna(team_ft_avg) else "N/A"), unsafe_allow_html=True)
+            st.markdown(stat_box("Avg Field Tilt Per 90 %", f"{team_ft_avg:.1f}" if pd.notna(team_ft_avg) else "N/A"), unsafe_allow_html=True)
 
         st.markdown("---")
 
