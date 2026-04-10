@@ -241,10 +241,10 @@ if page == "Home":
             ax_grid.set_facecolor('white')
             pitch_home.draw(ax=ax_grid)
             for x in x_bins_home[1:-1]:
-                ax_grid.plot([x, x], [0, 80], color='#4a7fb5',
+                ax_grid.plot([x, x], [0, 80], color='black',
                              linewidth=2, zorder=4, linestyle='--')
             for y in y_bins_home[1:-1]:
-                ax_grid.plot([0, 120], [y, y], color='#4a7fb5',
+                ax_grid.plot([0, 120], [y, y], color='black',
                              linewidth=2, zorder=4, linestyle='--')
             ax_grid.text(20, -6, 'Defensive\nThird', ha='center', fontsize=8,
                         color='#2c3e50', fontweight='bold')
@@ -258,9 +258,7 @@ if page == "Home":
                         color='#2c3e50', fontweight='bold', rotation=90)
             ax_grid.text(-10, 71, 'Right', ha='center', fontsize=8,
                         color='#2c3e50', fontweight='bold', rotation=90)
-            ax_grid.set_title('9-Zone Grid (attacking direction: left → right)',
-                             fontsize=9, color='#6c757d', pad=8)
-            plt.tight_layout()
+          
             st.pyplot(fig_grid)
             plt.close()
 
