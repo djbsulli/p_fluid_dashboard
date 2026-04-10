@@ -848,7 +848,7 @@ elif page == "Team Statistics":
             ax.axhline(ft_season_avg, color='#e74c3c', linewidth=1.2, linestyle='--',
                        label=f'Team Average: {ft_season_avg:.1f}%', zorder=1)
             ax.axhline(50, color='#888888', linewidth=1.0, linestyle=':',
-                       label='League Average: 50%', zorder=1)
+                        zorder=1)
             sel_ft_row = ft_data[ft_data['match_id'] == selected_match_id]
             if len(sel_ft_row) > 0:
                 ax.scatter(sel_ft_row['match_num'], sel_ft_row['field_tilt'],
