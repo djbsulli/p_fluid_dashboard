@@ -299,9 +299,7 @@ if page == "Home":
         for supplementary analysis.</p>
         <h4>Consistency Score</h4>
         <p>A team's consistency score measures the percentage of matches in which their fluidity score fell on the same side of the cross-league average (above or below zero).
-        A high consistency score indicates a team that reliably plays in a fluid or positional manner across their season.
-        A low consistency score indicates a team whose fluidity level varied considerably from match to match.
-        It is calculated as: max(% matches above zero, % matches below zero).</p>
+        A high consistency score indicates a team reliably playing with a more fluid or more positional style, whilst a low consistency score indicates more variable positional fluidity.
         </div>
         """, unsafe_allow_html=True)
 
