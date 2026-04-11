@@ -18,7 +18,7 @@ positional fluidity impacts attacking output.
 
 - **Home** — Background on the concept of positional fluidity and this project's methodology
 - **Player Statistics** — Seasonal and match-level fluidity scores, touch map visualisations, and most similar player comparisons
-- **Team Statistics** — Seasonal and match-level fluidity and attacking performance stats (xG, field tilt), with position category breakdowns and match-by-match trend plots
+- **Team Statistics** — Seasonal and match-level fluidity and attacking performance stats (xG, field tilt), with position category breakdowns and match-by-match trends
 
 ## Data
 
