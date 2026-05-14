@@ -1082,7 +1082,7 @@ elif page == "Team Statistics":
             ax.scatter(sel_match_row['match_num'], sel_match_row['team_match_z'],
                        color=PALETTE['accent'], s=200, zorder=5,
                        edgecolors=PALETTE['ink'], linewidths=1.4,
-                       label='Selected Match', marker='D')
+                        marker='D')
 
         # Season average line
         ax.axhline(season_avg_z_t, color=PALETTE['accent_soft'], linewidth=1.4, linestyle='--',
