@@ -680,7 +680,7 @@ elif page == "Player Statistics":
 
         # Similar players (by z-score distance)
         st.markdown(
-            f'<div class="section-header">Most Similar Players in Position div>',
+            f'<div class="section-header">Most Similar Players in Position',
             unsafe_allow_html=True
         )
 
