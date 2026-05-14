@@ -665,9 +665,9 @@ elif page == "Player Statistics":
                     label=selected_player_name
                 )
 
-            ax.axhline(y=0, color=PALETTE['ink'], linestyle='--',
-                       linewidth=1, alpha=0.7,
-                       label='Position avg (z = 0)')
+            ax.axhline(y=0, color=PALETTE['ink'], linestyle='-',
+                       linewidth=1.5, alpha=0.7,
+                       )
             ax.set_xlabel(selected_position, fontsize=11, fontweight='bold')
             ax.set_ylabel('Season Fluidity (z-score)', fontsize=11, fontweight='bold')
             ax.tick_params(axis='x', bottom=False, labelbottom=False)
