@@ -323,17 +323,17 @@ def draw_binned_touch_map(touch_df, ax, show_labels=True):
 
     # Reference labels around the pitch (matching home-page grid example)
     if show_labels:
-        ax.text(20, -6, 'Defensive\nThird', ha='center', fontsize=8,
+        ax.text(20, -6, 'Defensive\nThird', ha='center', fontsize=11,
                 color=PALETTE['ink'], fontweight='bold')
-        ax.text(60, -6, 'Middle\nThird', ha='center', fontsize=8,
+        ax.text(60, -6, 'Middle\nThird', ha='center', fontsize=11,
                 color=PALETTE['ink'], fontweight='bold')
-        ax.text(100, -6, 'Attacking\nThird', ha='center', fontsize=8,
+        ax.text(100, -6, 'Attacking\nThird', ha='center', fontsize=11,
                 color=PALETTE['ink'], fontweight='bold')
-        ax.text(-8, 9, 'Left', ha='center', fontsize=8,
+        ax.text(-8, 9, 'Left', ha='center', fontsize=11,
                 color=PALETTE['ink'], fontweight='bold', rotation=90)
-        ax.text(-8, 40, 'Central', ha='center', fontsize=8,
+        ax.text(-8, 40, 'Central', ha='center', fontsize=11,
                 color=PALETTE['ink'], fontweight='bold', rotation=90)
-        ax.text(-8, 71, 'Right', ha='center', fontsize=8,
+        ax.text(-8, 71, 'Right', ha='center', fontsize=11,
                 color=PALETTE['ink'], fontweight='bold', rotation=90)
 
 
