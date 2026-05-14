@@ -832,8 +832,7 @@ elif page == "Player Statistics":
                 ax.scatter(
                     [0], highlight['fluidity_z'].values[0],
                     color=PALETTE['accent'], s=160, zorder=10,
-                    edgecolors=PALETTE['ink'], linewidths=1.5,
-                    label='Match'
+                    edgecolors=PALETTE['ink'], linewidths=1.5
                 )
 
             ax.axhline(y=0, color=PALETTE['ink'], linestyle='-',
