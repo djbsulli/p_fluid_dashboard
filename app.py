@@ -495,15 +495,15 @@ if page == "Home":
             <table style='width:100%; font-size:0.85rem; border-collapse:collapse;'>
             <tr style='border-bottom:1px solid {PALETTE['rule']};'>
                 <td style='padding:6px 8px; font-weight:700; color:{PALETTE['accent']};'>Defenders</td>
-                <td style='padding:6px 8px;'>Centre Back, Left Back, Right Back</td>
+                <td style='padding:6px 8px;'>Centre Back, Full-Back</td>
             </tr>
             <tr style='border-bottom:1px solid {PALETTE['rule']};'>
                 <td style='padding:6px 8px; font-weight:700; color:{PALETTE['accent']};'>Midfielders</td>
-                <td style='padding:6px 8px;'>Defensive Midfield, Central Midfield, Left Midfield, Right Midfield</td>
+                <td style='padding:6px 8px;'>Defensive Midfield, Central Midfield, Wide Midfield, Attacking Midfield</td>
             </tr>
             <tr>
                 <td style='padding:6px 8px; font-weight:700; color:{PALETTE['accent']};'>Attackers</td>
-                <td style='padding:6px 8px;'>Attacking Midfield, Left Wing, Right Wing, Centre Forward</td>
+                <td style='padding:6px 8px;'>Centre Forward, Wide Forward</td>
             </tr>
             </table>
             </div>
