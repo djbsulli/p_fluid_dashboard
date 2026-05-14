@@ -609,10 +609,10 @@ elif page == "Player Statistics":
         with c1:
             st.markdown(stat_box("Team", player_row['team']), unsafe_allow_html=True)
         with c2:
-            st.markdown(stat_box("Season Fluidity (z)", f"{player_row['season_fluidity']:.2f}"),
+            st.markdown(stat_box("Season Fluidity (avg_z)", f"{player_row['season_fluidity']:.2f}"),
                         unsafe_allow_html=True)
         with c3:
-            st.markdown(stat_box("All-Leagues Rank", f"#{int(player_row['all_leagues_f_rank'])}"),
+            st.markdown(stat_box("Overall Rank", f"#{int(player_row['all_leagues_f_rank'])}"),
                         unsafe_allow_html=True)
         with c4:
             st.markdown(stat_box("League Rank", f"#{int(player_row['league_f_rank'])}"),
@@ -661,18 +661,17 @@ elif page == "Player Statistics":
                 ax.scatter(
                     [0], player_pos_data['season_fluidity'].values[0],
                     color=PALETTE['accent'], s=140, zorder=10,
-                    edgecolors=PALETTE['ink'], linewidths=1.5,
-                    label=selected_player_name
+                    edgecolors=PALETTE['ink'], linewidths=1.5
+                    
                 )
 
             ax.axhline(y=0, color=PALETTE['ink'], linestyle='-',
                        linewidth=1.5, alpha=0.7,
                        )
             ax.set_xlabel(selected_position, fontsize=11, fontweight='bold')
-            ax.set_ylabel('Season Fluidity (z-score)', fontsize=11, fontweight='bold')
+            ax.set_ylabel('Season Fluidity (avg_z)', fontsize=11, fontweight='bold')
             ax.tick_params(axis='x', bottom=False, labelbottom=False)
             ax.grid(axis='y', alpha=0.3, color=PALETTE['grid'])
-            ax.legend(fontsize=9, loc='upper right')
             plt.tight_layout()
             st.pyplot(fig)
             plt.close()
@@ -763,7 +762,7 @@ elif page == "Player Statistics":
             st.markdown(stat_box("Match Fluidity (z)", f"{match_row_pl['fluidity_z']:.2f}"),
                         unsafe_allow_html=True)
         with c2:
-            st.markdown(stat_box("Season Rank", f"#{match_rank_pl} of {total_matches_pl} matches"),
+            st.markdown(stat_box("rank (all match scores for selected player)", f"#{match_rank_pl} of {total_matches_pl} matches"),
                         unsafe_allow_html=True)
 
         st.markdown("---")
@@ -837,9 +836,8 @@ elif page == "Player Statistics":
                     label='Match'
                 )
 
-            ax.axhline(y=0, color=PALETTE['ink'], linestyle='--',
-                       linewidth=1, alpha=0.7,
-                       label='Position average (z = 0)')
+            ax.axhline(y=0, color=PALETTE['ink'], linestyle='-',
+                       linewidth=1.5, alpha=0.7,
             ax.set_xlabel(selected_position, fontsize=11, fontweight='bold')
             ax.set_ylabel('Match Fluidity (z-score)', fontsize=11, fontweight='bold')
             ax.tick_params(axis='x', bottom=False, labelbottom=False)
@@ -914,16 +912,16 @@ elif page == "Team Statistics":
 
         c1, c2, c3, c4, c5 = st.columns(5)
         with c1:
-            st.markdown(stat_box("Season Avg Fluidity (z)", f"{team_row['season_avg']:.2f}"),
+            st.markdown(stat_box("Season Average Fluidity (avg_z)", f"{team_row['season_avg']:.2f}"),
                         unsafe_allow_html=True)
         with c2:
-            st.markdown(stat_box("All-Leagues Rank", f"#{all_leagues_rank} of {total_all}"),
+            st.markdown(stat_box("Overall Rank", f"#{all_leagues_rank} of {total_all}"),
                         unsafe_allow_html=True)
         with c3:
             st.markdown(stat_box("League Rank", f"#{league_rank} of {total_league}"),
                         unsafe_allow_html=True)
         with c4:
-            st.markdown(stat_box("Consistency", f"{consistency_pct:.0f}%"),
+            st.markdown(stat_box("Consistency%", f"{consistency_pct:.0f}%"),
                         unsafe_allow_html=True)
         with c5:
             st.markdown(stat_box("Matches", int(team_row['matches'])),
@@ -971,9 +969,9 @@ elif page == "Team Statistics":
                         border-radius:4px; padding:14px 16px; margin-top:8px;
                         font-size:0.85rem; color:{PALETTE['ink_soft']}; line-height:1.5;'>
             <b style='color:{PALETTE['ink']};'>Note</b><br>
-            Zonal z-scores are calculated separately within each positional group and are <b>not on the
-            same scale</b> as the overall season z-score. Use them as a <i>directional</i> indication of
-            where a team is more or less fluid, not as absolute magnitudes.
+            Zonal z-scores are calculated on seperate scales within each positional group and are <b>not on the
+            same scale</b> as the overall team scores. Treat them as a <i>directional</i> indication of
+            team-level zonal variations in fluidity, not as absolute comparitive scores.
             </div>
             """, unsafe_allow_html=True)
 
@@ -1018,7 +1016,7 @@ elif page == "Team Statistics":
                    edgecolors=PALETTE['ink'], linewidths=0.7, label='Positional (z < 0)')
 
         # Prominent z=0 reference line — no legend entry
-        ax.axhline(0, color=PALETTE['ink'], linewidth=1.8, linestyle='-', alpha=0.9, zorder=1)
+        ax.axhline(0, color=PALETTE['ink'], linewidth=1.5, linestyle='-', alpha=0.9, zorder=1)
 
         ax.set_ylim(-4.5, 4.5)
         ax.set_xlabel('Match Number', fontsize=11, fontweight='bold')
@@ -1147,8 +1145,8 @@ elif page == "Team Statistics":
                         border-radius:4px; padding:14px 16px; margin-top:8px;
                         font-size:0.85rem; color:{PALETTE['ink_soft']}; line-height:1.5;'>
             <b style='color:{PALETTE['ink']};'>Note</b><br>
-            Zonal z-scores are calculated separately within each positional group and are <b>not on the
-            same scale</b> as the overall match z-score. Use them as a <i>directional</i> indication of
-            where the team's fluidity was concentrated in this match, not as absolute magnitudes.
+            Zonal match z-scores are calculated separately within each positional group and are <b>not on the
+            same scale</b> as the overall team match scores. Treat them as a <i>directional</i> indication of
+            where a team's fluidity was concentrated in this match, not as absolute comparitive scores
             </div>
             """, unsafe_allow_html=True)
