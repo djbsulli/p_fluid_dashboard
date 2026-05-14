@@ -705,7 +705,7 @@ elif page == "Player Statistics":
                     </div>
                     <div style='font-size:1.4rem; font-weight:700;
                                 color:{PALETTE['accent']};'>
-                        z = {row['season_fluidity']:.2f}
+                        avg_z = {row['season_fluidity']:.2f}
                     </div>
                 </div>
                 """, unsafe_allow_html=True)
