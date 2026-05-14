@@ -428,31 +428,30 @@ if page == "Home":
         enough volume to capture a meaningful movement profile.</p>
 
         <h4>2 — Zone Assignment</h4>
-        <p>The pitch was divided into a <b>nine-zone grid</b> (see touch maps in player statistics for reference),
+        <p>The pitch was divided into a <b>nine-zone grid</b> (see map below),
         splitting the defensive, midfield and attacking thirds into left, central and right channels.</p>
         <p style='font-size:0.85rem; color:#5C5C5C; margin-top:-2px; padding-left:14px;
                   border-left:2px solid #D4D4CE;'>
-        <i>Note: StatsBomb's coordinate system is normalised so that a team's attacking direction is left-to-right
-        in both halves of a match. This ensures zone touch allocations are consistent across both halves and
-        between matches.</i></p>
+        <i>Note: StatsBomb's coordinate system is normalised to a left-to-right attacking direction
+        in both halves of a match. This ensures zone touch allocations are consistent in all matches.</i></p>
 
         <h4>3 — Raw Fluidity Percentage</h4>
         <p>For each qualifying player-position-match combination, the <b>fluidity score</b> was calculated as the
-        percentage of touches falling outside the player's most frequently occupied zone:
+        percentage of touches falling outside the player's most frequently occupied (modal) zone:
         <code>(touches outside modal zone / total touches) × 100</code>. Higher scores indicate more fluid,
         zone-crossing player movements.</p>
 
         <h4>4 — Position Z-Scoring</h4>
         <p>Match-level fluidity percentages were z-scored within position category. This expresses all scores on
-        a common scale of standard deviations from their positional mean (e.g. a centre back with z = 1 is one
-        standard deviation more fluid than the overall centre-back average), accounting for inherent movement
-        profile differences within position.</p>
+        a common scale of standard deviations from their positional mean (e.g. z=1 is one standard deviation more fluid than the position average, z=-1 is 1 one standard deviation less fluid
+        than the position average), accounting for inherent movement
+        profile differences between positions.</p>
 
         <h4>5 — Seasonal Aggregation</h4>
         <p>To produce season-level player statistics, a player was required to meet the fifteen-touch threshold in
-        at least <b>eight matches within a single position</b>. Seasonal fluidity scores are the mean of all
-        qualifying match-level z-scores. A player may appear in the dashboard multiple times if they qualified
-        in more than one distinct position across the season.</p>
+        at least <b>eight matches within a single position</b>. Seasonal fluidity scores are then the mean of all
+        qualifying match-level z-scores. A player may appear in the dashboard multiple times if they qualified seperately
+        in more than one position across the season.</p>
 
         </div>
         """, unsafe_allow_html=True)
@@ -517,30 +516,29 @@ if page == "Home":
 
         <h4>1 — Match Scores</h4>
         <p>Each team's <b>match-level fluidity score</b> is the mean of all qualifying player z-scores recorded by
-        that team in that match. After this aggregation, the team-match values are themselves z-standardised
-        across the full cross-league distribution, producing a final score expressing how a team's match
-        compared to the overall sample on a common scale.</p>
+        that team in the match. After this aggregation, the team-match values are themselves z-standardised
+        across the full cross-league distribution of match, producing a final score expressing whether a team was more (z>0) or less (z<0) positionally fluid than
+        the average of all teams</p>
 
         <h4>2 — Seasonal Averages</h4>
         <p><b>Season-level team fluidity scores</b> are the mean of all of a team's match-level z-scores across
-        the season. Positive values identify teams that played more fluidly than the overall sample average across
-        the season; negative values identify teams more positional than the average.</p>
+        the season. Positive values identify teams that played on average more fluidly than the overall sample average across
+        the season; negative values identify teams more positional/less fluid than the average.</p>
 
         <h4>3 — Tactical Consistency Score</h4>
         <p>A team's <b>tactical consistency</b> measures how reliably they adhered to a single tactical state
         (fluid or positional) across the season, calculated as:
         <code>(matches in dominant style / total matches) × 100</code>, where the dominant style is whichever of
-        fluid (z &gt; 0) or positional (z &lt; 0) occurred most often. High consistency scores indicate teams
+        fluid (z &gt; 0) or positional (z &lt; 0) match scores occurred most frequently. High consistency scores indicate teams
         with a clearly committed tactical identity; low scores indicate teams that switched between fluid and
         positional approaches match-to-match.</p>
 
         <h4>4 — Zonal Scores</h4>
         <p>To capture how fluidity is distributed across the pitch, position categories were grouped into three
-        <b>zonal scores</b>: <b>Defence</b> (Centre Back, Full-Back), <b>Midfield</b> (Defensive, Central,
+        <b>zones</b>: <b>Defence</b> (Centre Back, Full-Back), <b>Midfield</b> (Defensive, Central,
         Attacking, Wide Midfield) and <b>Attack</b> (Centre Forward, Wide Forward). For each zone, the mean of
-        all qualifying player z-scores in that group was calculated, producing zonal scores at both match and
-        season level. These reveal whether a team's fluidity is concentrated in a particular phase of the pitch
-        or distributed evenly.</p>
+        all qualifying player z-scores in that group was calculated, producing zonal positional fluidity z-scores at both match and
+        season level. These reveal whether a team's fluidity is a consistent uniform strategy, or varies in different zones of the pitch.</p>
 
         </div>
         """, unsafe_allow_html=True)
