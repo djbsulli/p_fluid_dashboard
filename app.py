@@ -837,7 +837,7 @@ elif page == "Player Statistics":
                 )
 
             ax.axhline(y=0, color=PALETTE['ink'], linestyle='-',
-                       linewidth=1.5, alpha=0.7,
+                       linewidth=1.5, alpha=0.7)
             ax.set_xlabel(selected_position, fontsize=11, fontweight='bold')
             ax.set_ylabel('Match Fluidity (z-score)', fontsize=11, fontweight='bold')
             ax.tick_params(axis='x', bottom=False, labelbottom=False)
