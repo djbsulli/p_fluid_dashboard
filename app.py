@@ -203,7 +203,7 @@ st.markdown(f"""
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Google Drive ID for the large touches parquet file
-TOUCHES_GDRIVE_ID = "1EGNoqoQJXe8aOjFe5BUw2ya41Yj6eBYg"
+TOUCHES_GDRIVE_ID = "N4X8tDqvNDK0M4nNyEKohyEXgu2a6"
 
 
 @st.cache_data
