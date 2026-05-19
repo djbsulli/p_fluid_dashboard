@@ -222,7 +222,7 @@ def load_touches(player_id):
     import gdown
     output_path = "/tmp/pf_touches.parquet"
     if not os.path.exists(output_path):
-        url = f"https://drive.google.com/uc?id={N4X8tDqvNDK0M4nNyEKohyEXgu2a6}"
+        url = f"https://drive.google.com/uc?id={TOUCHES_GDRIVE_ID}"
         gdown.download(url, output_path, quiet=False)
     touches = pd.read_parquet(output_path)
     return touches[touches['player_id'] == player_id]
