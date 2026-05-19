@@ -218,9 +218,8 @@ def load_data():
 
 @st.cache_data(show_spinner="Loading touch data...")
 def load_touches(player_id):
-    """Fetch the large touches parquet from Google Drive on first run, cache locally."""
     import gdown
-    output_path = "/tmp/pf_touches.parquet"
+    output_path = "/tmp/pf_spatial_events.parquet"  # changed from pf_touches.parquet
     if not os.path.exists(output_path):
         url = f"https://drive.google.com/uc?id={TOUCHES_GDRIVE_ID}"
         gdown.download(url, output_path, quiet=False)
